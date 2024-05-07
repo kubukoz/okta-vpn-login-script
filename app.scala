@@ -53,7 +53,7 @@ def driver(using d: WebDriver): d.type = d
   }
 }
 
-def waitForElement(locator: By, rate: Duration = 100.millis)(using WebDriver): WebElement = {
+def waitForElement(locator: By, rate: Duration = 100.millis): Remote[WebElement] = {
   @tailrec
   def findEl(): WebElement =
     try driver.findElement(locator)
