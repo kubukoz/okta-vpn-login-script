@@ -39,9 +39,6 @@ def driver(using d: WebDriver): d.type = d
     waitForElement(By.cssSelector("input[type=password]")).sendKeys(pass)
     waitForElement(By.cssSelector("input[type=submit]")).click()
 
-    // Send push notification
-    waitForElement(By.cssSelector(".authenticator-button[data-se='okta_verify-push'] .link-button")).click()
-
     // This could be more easily done by checking the URL, but the XPath way means I don't need the URL in my source code or any external config.
     waitForElement(By.xpath("//body[text()='Login Successful!']"), rate = 1.second)
 
