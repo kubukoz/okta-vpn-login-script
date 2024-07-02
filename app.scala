@@ -34,8 +34,8 @@ def driver(using d: WebDriver): d.type = d
 
     driver.get(url)
 
-    waitForElement(By.cssSelector("input[name=identifier]")).sendKeys(username)
-    waitForElement(By.cssSelector("input[type=submit]")).click()
+    // waitForElement(By.cssSelector("input[name=identifier]")).sendKeys(username)
+    // waitForElement(By.cssSelector("input[type=submit]")).click()
     waitForElement(By.cssSelector("input[type=password]")).sendKeys(pass)
     waitForElement(By.cssSelector("input[type=submit]")).click()
 
